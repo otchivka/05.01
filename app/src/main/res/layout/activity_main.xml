@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/background_light">
+
+    <TextView
+        android:id="@+id/question_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_text"
+        android:textSize="@dimen/text_size_title"
+        android:textColor="@color/purple_500"
+        android:padding="@dimen/padding_large"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/prev_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Назад"
+            android:drawableLeft="@drawable/arrow_left"
+            android:drawablePadding="8dp"
+            android:textSize="18sp"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Далее"
+            android:drawableRight="@drawable/arrow_right"
+            android:drawablePadding="8dp"
+            android:textSize="18sp"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/true_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/true_button"
+            android:textSize="@dimen/text_size_button"
+            android:layout_margin="8dp"/>
+
+        <Button
+            android:id="@+id/false_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/false_button"
+            android:textSize="@dimen/text_size_button"
+            android:layout_margin="8dp"/>
+        <Button
+            android:id="@+id/deceit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deceit_button"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_red_light"/>
+
+    </LinearLayout>
+</LinearLayout>
