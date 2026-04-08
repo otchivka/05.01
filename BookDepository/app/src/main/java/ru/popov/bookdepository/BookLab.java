@@ -1,0 +1,49 @@
+package ru.popov.bookdepository;
+
+
+import android.content.Context;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
+
+public class BookLab {
+
+    private static BookLab sBookLab;
+    private List<Book> mBooks;
+
+
+    private BookLab(Context context) {
+        mBooks = new ArrayList<>();
+        // Генерируем 100 тестовых книг
+        for (int i = 0; i < 100; i++) {
+            Book book = new Book();
+            book.setTitle("Книга " + i);
+            // Для каждого второго объекта устанавливаем признак прочтения
+            book.setReaded(i % 2 == 0);
+            mBooks.add(book);
+        }
+    }
+
+    // Метод для получения экземпляра синглетного класса
+    public static BookLab get(Context context) {
+        if (sBookLab == null) {
+            sBookLab = new BookLab(context);
+        }
+        return sBookLab;
+    }
+
+    public List<Book> getBooks() {
+        return mBooks;
+    }
+
+    public Book getBook(UUID id) {
+        for (Book book : mBooks) {
+            if (book.getId().equals(id)) {
+                return book;
+            }
+        }
+        return null;
+    }
+
+}
