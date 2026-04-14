@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <include layout="@layout/view_camera_and_title" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дата начала прочтения:"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/book_date_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp" />
+    <CheckBox
+        android:id="@+id/book_readed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Прочитана"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+    <Button
+        android:id="@+id/book_report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/book_report_text"
+        android:drawableLeft="@android:drawable/ic_menu_send"
+        android:padding="12dp"
+        android:layout_marginBottom="8dp" />
+    <Button
+        android:id="@+id/book_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/search_in_browser"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:padding="12dp" />
+
+</LinearLayout>
